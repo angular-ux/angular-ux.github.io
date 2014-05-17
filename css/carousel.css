@@ -39,7 +39,7 @@ body {
 .carousel {
   height: 500px;
   margin-bottom: 60px;
-     background: url(imgs/background.jpg) no-repeat center center ; 
+     background: url(../imgs/header/header-img.jpg) no-repeat center center ; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

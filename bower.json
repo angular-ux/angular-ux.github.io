@@ -1,0 +1,15 @@
+{
+  "name": "angular-ux.github.io",
+  "version": "0.0.1",
+  "homepage": "https://github.com/angular-ux/angular-ux.github.io",
+  "authors": [
+    "NFM"
+  ],
+  "description": "Website of AngularUX",
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular-carousel": "git://github.com/revolunet/angular-carousel.git#~0.2.3"
+  }
+}
