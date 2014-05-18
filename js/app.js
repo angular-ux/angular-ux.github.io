@@ -10,6 +10,8 @@ angular.module('MyApp', ['angular-carousel', 'ngRoute'])
   .when('/components', {
     templateUrl: 'view/components.html'
   })
+   
+  .otherwise({redirectTo: 'home'});
 
 
   // configure html5 to get links working on jsfiddle
