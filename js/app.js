@@ -1,4 +1,4 @@
-angular.module('MyApp', ['angular-carousel', 'ngRoute'])
+angular.module('MyApp', ['angular-carousel', 'ngRoute', 'ngAnimate'])
 
 .config(function($routeProvider, $locationProvider) {
  

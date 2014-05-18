@@ -10,6 +10,8 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "angular-carousel": "git://github.com/revolunet/angular-carousel.git#~0.2.3"
+    "angular-carousel": "git://github.com/revolunet/angular-carousel.git#~0.2.3",
+    "angular-animate": "git://github.com/angular/bower-angular-animate.git#~1.2.16",
+    "angular-route": "git://github.com/angular/bower-angular-route.git#~1.2.16"
   }
 }
