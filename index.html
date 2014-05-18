@@ -7,9 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+    <meta name="fragment" content="!" />
     <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
 
-    <title>Carousel Template for Bootstrap</title>
+    <title>Angular UX</title>
 
     <!-- Bootstrap core CSS -->
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
@@ -26,6 +27,7 @@
     
 
     <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
     <script src="bower_components/angular-carousel/dist/angular-carousel.min.js"></script>
     <script src="bower_components/angular-touch/angular-touch.min.js"></script>
     <script src="js/app.js"></script>
@@ -54,8 +56,14 @@
 
     <div class="menubar">
       <div class="row-fluid">
-        <div class="col-md-8"><img src="imgs/header/menubar-logo.png" class="logo"> </div>
-        <!--<div class="col-md-4 text-right" style="padding-right:160px">Overview | Videos | Contact</div>-->
+          <a href="#/home">
+            <img src="imgs/header/menubar-logo.png" class="logo">
+          </a>
+        <div class="items">
+            <a href="#/home">Home</a> | 
+            <a href="#/components">Components</a>
+        </div>
+
       </div>
     </div>
 
@@ -63,6 +71,7 @@
 
     <!-- Carousel
     ================================================== -->
+
     <div id="myCarousel" class="carousel slide custom" data-ride="carousel">
       <!-- Indicators -->
       <ol class="carousel-indicators">
@@ -101,155 +110,31 @@
         </div>
         
       </div>
-      <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-      <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+     
     </div><!-- /.carousel -->
 
 
 
-    <!-- Marketing messaging and featurettes
-    ================================================== -->
-    <!-- Wrap the rest of the page in another container to center all the content. -->
-
     <div class="container marketing">
+    <div ng-view  autoscroll="true"></div>
 
-      <!-- Three columns of text below the carousel -->
-      <div class="row">
-        <div class="col-lg-4" >
-          <img  src="imgs/home/features/home-card.jpg" class="home-features-img" >
-          <h2>For mobile and desktop web applications</h2>
-          <p>Augment your web and mobile HTML5 applications with powerful yet easy to use controls. Angular Cards do the hard job giving you time to focus on your contents!<br>
-          Try it, it's easy as draw a card!</p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <img  src="imgs/home/features/home-phonegap.jpg" class="home-features-img">
-          <h2>AngularJS, Ionic and Phonegap</h2>
-          <p>Built on top of AngularJS, Angular Cards supports Ionic and Phonegap applications. <br>Create complex UI and CRUD web applications on mobile has never been easier... just draw a Card!</p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <img  src="imgs/home/features/home-ux.jpg" class="home-features-img">
-          <h2>Focused on UX</h2>
-          <p>Angular Cards offers a fresh solution to standard user interactions and data visualizations in order to create a beautiful and new user experience.</p>
-          <!--<p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>-->
-        </div><!-- /.col-lg-4 -->
-      </div><!-- /.row -->
-
-
-      <!-- START THE FEATURETTES -->
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-3">
-          <!--<h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>-->
-          <h1>Interactive smooth charts <span class="text-muted">It'll blow your mind.</span></h1>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. </p>
-        </div>
-         <div class="col-md-9">
-          <ul rn-carousel class="image" rn-carousel-indicator="true" rn-carousel-control>
-            <li><img src="imgs/home/overview/home-img-charts1.jpg" width="100%"></li>
-            <li><img src="imgs/home/overview/home-img-charts2.jpg" width="100%"></li>
-            <li><img src="imgs/home/overview/home-img-charts1.jpg" width="100%"></li>
-          </ul>
-        </div>
-      </div>
+    </div><!-- /.container -->
 
 
       <hr class="featurette-divider">
 
-      <div class="row featurette">
-        <div class="col-md-3">
-          <!--<h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>-->
-          <h1>Interactive smooth charts <span class="text-muted">It'll blow your mind.</span></h1>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. </p>
-        </div>
-        <div class="col-md-9">
-          <ul rn-carousel class="image" rn-carousel-indicator="true" rn-carousel-control>
-            <li><img src="imgs/home/overview/imags-home-1.jpg" width="100%"></li>
-            <li><img src="imgs/home/overview/imags-home-2.jpg" width="100%"></li>
-            <li><img src="imgs/home/overview/imags-home-1.jpg" width="100%"></li>
-          </ul>
-        </div>
-      </div>
-
-
-     
-
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-        <div class="col-md-5">
-          <img class="featurette-image img-responsive" src="imgs/home/overview/demo_map.jpg" alt="Generic placeholder image">
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-5">
-          <img class="featurette-image img-responsive" src="imgs/home/overview/demo_chartcombo.jpg" alt="Generic placeholder image">
-        </div>
-        <div class="col-md-7">
-          <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-        <div class="col-md-5">
-          <img class="featurette-image img-responsive" src="imgs/home/overview/demo_scrolltext.jpg" alt="Generic placeholder image">
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <!-- /END THE FEATURETTES -->
-
-
-        <!-- Three columns of text below the carousel -->
-      <div class="row">
-      	<h1 class="featurette-heading" style="text-align:center">Other cards</h1>
-      	<hr>
-        <div class="col-lg-4">
-          <img class="featurette-image img-responsive" src="imgs/home/overview/demo_chartcombo.jpg" alt="Generic placeholder image">
-          <h2>For mobile and desktop web applications</h2>
-          <p>Additional components for your HTML5 mobile and hybrid applications</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <img class="featurette-image img-responsive" src="imgs/home/overview/demo_chartcombo.jpg" alt="Generic placeholder image">
-          <h2>AngularJS, Ionic and Phonegap</h2>
-          <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <img class="featurette-image img-responsive" src="imgs/home/overview/demo_chartcombo.jpg" alt="Generic placeholder image">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-      </div><!-- /.row -->
 
 
 
       <!-- FOOTER -->
       <footer>
-        <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2014 Matteo Ronchi and Fabio Biondi -, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+        <p class="pull-right"><a href="https://github.com/angular-ux/angular-ux.github.io">Fork me on GitHub</a></p>
+        <p>&copy; 2014 Matteo Ronchi and Fabio Biondi</p>
       </footer>
 
-    </div><!-- /.container -->
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
 
 
     <!-- Bootstrap core JavaScript
